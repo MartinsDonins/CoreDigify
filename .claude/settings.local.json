@@ -6,7 +6,10 @@
       "Bash(npm start)",
       "Bash(npm run check-node:*)",
       "Bash(rmdir:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(timeout 5 npm start)",
+      "Bash(PORT=3001 timeout 10 npm start)",
+      "Bash(PORT=3003 timeout 8 npm start)"
     ],
     "deny": []
   }

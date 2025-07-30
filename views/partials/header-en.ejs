@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,17 +16,17 @@
                 <span>CoreDigify.com</span>
             </div>
             <ul class="navbar-nav">
-                <li><a href="/lv" class="<%= page === 'home' ? 'active' : '' %>">Sākums</a></li>
-                <li><a href="/lv/web-izstrade" class="<%= page === 'webdev' ? 'active' : '' %>">Web Izstrāde</a></li>
-                <li><a href="/lv/kontakti" class="<%= page === 'contact' ? 'active' : '' %>">Kontakti</a></li>
+                <li><a href="/en" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+                <li><a href="/en/web-development" class="<%= page === 'webdev' ? 'active' : '' %>">Web Development</a></li>
+                <li><a href="/en/contact" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
                 <li class="language-switcher">
                     <% 
-                    let enUrl = '/en';
-                    if (page === 'webdev') enUrl = '/en/web-development';
-                    else if (page === 'contact') enUrl = '/en/contact';
+                    let lvUrl = '/lv';
+                    if (page === 'webdev') lvUrl = '/lv/web-izstrade';
+                    else if (page === 'contact') lvUrl = '/lv/kontakti';
                     %>
-                    <a href="<%= enUrl %>" class="lang-link">
-                        <i class="fas fa-globe"></i> EN
+                    <a href="<%= lvUrl %>" class="lang-link">
+                        <i class="fas fa-globe"></i> LV
                     </a>
                 </li>
             </ul>
@@ -37,3 +37,5 @@
             </div>
         </div>
     </nav>
+
+    <main>
