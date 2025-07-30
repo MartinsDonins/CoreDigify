@@ -1,4 +1,4 @@
-# WebDev.lv - Web Lapu Izstrāde
+# CoreDigify.com - Web Lapu Izstrāde un WordPress Risinājumi
 
 Profesionāla web lapu izstrādes un hostinga mājaslapa latviešu valodā, izveidota ar Node.js 22.17.0 un Express.
 
