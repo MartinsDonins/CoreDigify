@@ -145,6 +145,12 @@ Serveris automātiski darbojas uz porta 3000, bet var mainīt ar PORT environmen
 PORT=8080 npm start
 ```
 
+## Publikācijas vide
+
+Lapa tiek izvietota uz **CloudLinux** servera ar **cPanel** vadības paneli,
+kur ir uzstādīta **Node.js 22.17.0**. Tas nodrošina, ka projekts darbojas
+ar tieši šo Node.js versiju gan izstrādē, gan produkcijā.
+
 ## Licences
 
 MIT License
