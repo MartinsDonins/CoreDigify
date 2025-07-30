@@ -1,30 +1,33 @@
-# WebHost.lv - Web Hostinga Mājaslapa
+# WebDev.lv - Web Lapu Izstrāde
 
-Moderna web hostinga mājaslapa latviešu valodā, izveidota ar Node.js un Express.
+Profesionāla web lapu izstrādes un hostinga mājaslapa latviešu valodā, izveidota ar Node.js 22.17.0 un Express.
 
 ## Funkcionalitāte
 
+- 💻 Web lapu izstrādes pakalpojumi
 - 📱 Responzīvs dizains
 - 🎨 Moderns UI ar gradientiem un animācijām
 - 🚀 Ātrdarbīgs Express.js serveris
 - 📧 Kontaktu forma
-- 💰 Cenu plāni ar mēneša/gada pārslēgšanu
+- 💰 Cenu plāni web izstrādei
 - ❓ FAQ sadaļa
 - 🛡️ SSL drošība
 - 📊 Animēta statistika
+- 🌐 Hostings kā papildus pakalpojums
 
 ## Lapas
 
-- **Sākums** - Hero sadaļa ar galvenajām īpašībām
-- **Pakalpojumi** - Detalizēts pakalpojumu apraksts
+- **Sākums** - Web izstrādes fokuss ar hostingu kā papildus
+- **Pakalpojumi** - Hostinga pakalpojumi (VPS, domēni, SSL)
+- **Web Izstrāde** - Detalizēta web izstrādes informācija
 - **Cenas** - Hostinga un VPS plāni
 - **Kontakti** - Kontaktinformācija un forma
 
 ## Tehniskā informācija
 
 ### Izmantotās tehnoloģijas
-- Node.js
-- Express.js
+- **Node.js 22.17.0** (specifiska versija)
+- Express.js 4.19.2
 - EJS šabloni
 - CSS3 ar Flexbox/Grid
 - Vanilla JavaScript
@@ -34,10 +37,12 @@ Moderna web hostinga mājaslapa latviešu valodā, izveidota ar Node.js un Expre
 ### Projekta struktūra
 ```
 ├── server.js          # Galvenais servera fails
-├── package.json       # NPM atkarības
+├── package.json       # NPM atkarības ar Node.js 22.17.0
+├── .nvmrc            # Node Version Manager konfigurācija
 ├── views/             # EJS šabloni
-│   ├── index.ejs      # Sākumlapa
-│   ├── services.ejs   # Pakalpojumi
+│   ├── index.ejs      # Sākumlapa (web izstrāde)
+│   ├── services.ejs   # Pakalpojumi (hostings)
+│   ├── webdev.ejs     # Web izstrādes lapa
 │   ├── pricing.ejs    # Cenas
 │   ├── contact.ejs    # Kontakti
 │   └── partials/      # Daļējie šabloni
@@ -49,16 +54,38 @@ Moderna web hostinga mājaslapa latviešu valodā, izveidota ar Node.js un Expre
 
 ## Uzstādīšana
 
-1. Klonējiet repozitoriju
-2. Instalējiet atkarības:
+### Priekšnosacījumi
+- Node.js 22.17.0 (obligāti)
+- npm 10.0.0 vai jaunāka versija
+
+### Uzstādīšanas soļi
+
+1. **Pārbaudiet Node.js versiju:**
+   ```bash
+   node --version  # Jābūt v22.17.0
+   ```
+
+2. **Ja izmantojat NVM:**
+   ```bash
+   nvm use  # Automātiski ielādēs versiju no .nvmrc
+   ```
+
+3. **Klonējiet repozitoriju un instalējiet atkarības:**
    ```bash
    npm install
    ```
-3. Palaidiet serveri:
+
+4. **Pārbaudiet Node.js versiju projektā:**
+   ```bash
+   npm run check-node
+   ```
+
+5. **Palaidiet serveri:**
    ```bash
    npm start
    ```
-4. Atveriet pārlūkprogrammā: http://localhost:3000
+
+6. **Atveriet pārlūkprogrammā:** http://localhost:3000
 
 ## Izstrādei
 
@@ -85,6 +112,30 @@ npm run dev
 - Scroll-to-top poga
 - Statistikas skaitītāji
 - Intersection Observer animācijas
+
+## Node.js Versijas Pārvaldība
+
+Projekts ir konfigurēts izmantot Node.js 22.17.0. Dažādi faili versijas kontrolei:
+
+- **package.json** - `engines` sadaļa definē Node.js 22.17.0
+- **.nvmrc** - NVM (Node Version Manager) konfigurācija  
+- **.node-version** - Nodenv un citu versiju menedžeru atbalsts
+
+### Versijas maiņa ar NVM:
+```bash
+# Windows
+nvm install 22.17.0
+nvm use 22.17.0
+
+# Linux/Mac
+nvm install 22.17.0
+nvm use 22.17.0
+```
+
+### Versijas pārbaude:
+```bash
+npm run check-node  # Parāda pašreizējo Node.js versiju
+```
 
 ## Konfigurācija
 
