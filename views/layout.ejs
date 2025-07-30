@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <i class="fas fa-server"></i>
+                <span>WebHost.lv</span>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Sākums</a></li>
+                <li><a href="/pakalpojumi" class="<%= page === 'services' ? 'active' : '' %>">Pakalpojumi</a></li>
+                <li><a href="/cenas" class="<%= page === 'pricing' ? 'active' : '' %>">Cenas</a></li>
+                <li><a href="/kontakti" class="<%= page === 'contact' ? 'active' : '' %>">Kontakti</a></li>
+            </ul>
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-server"></i> WebHost.lv</h3>
+                    <p>Uzticams web hostings Latvijā jau kopš 2020. gada. Mēs nodrošinām ātru, drošu un kvalitatīvu hostingu visiem jūsu projektiem.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Pakalpojumi</h4>
+                    <ul>
+                        <li><a href="/pakalpojumi">Web Hostings</a></li>
+                        <li><a href="/pakalpojumi">VPS Serveri</a></li>
+                        <li><a href="/pakalpojumi">Domēnu reģistrācija</a></li>
+                        <li><a href="/pakalpojumi">SSL sertifikāti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Atbalsts</h4>
+                    <ul>
+                        <li><a href="/kontakti">24/7 Atbalsts</a></li>
+                        <li><a href="/kontakti">Dokumentācija</a></li>
+                        <li><a href="/kontakti">Biežāk uzdotie jautājumi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakti</h4>
+                    <p><i class="fas fa-envelope"></i> info@webhost.lv</p>
+                    <p><i class="fas fa-phone"></i> +371 20 123 456</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rīga, Latvija</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WebHost.lv. Visas tiesības aizsargātas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

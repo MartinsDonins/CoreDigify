@@ -1,0 +1,174 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Sazināties ar Mums</h1>
+        <p>Mēs esam šeit, lai palīdzētu jums 24/7</p>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Sazinieties ar mūsu komandu</h2>
+                <p>Mūsu ekspertu komanda ir gatava atbildēt uz jūsu jautājumiem un palīdzēt atrast piemērotāko risinājumu jūsu vajadzībām.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefons</h4>
+                            <p>+371 20 123 456</p>
+                            <span>24/7 pieejams</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-pasts</h4>
+                            <p>info@webhost.lv</p>
+                            <span>Atbildēsim 1 stundas laikā</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adrese</h4>
+                            <p>Brīvības iela 123<br>Rīga, LV-1001<br>Latvija</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Live Chat</h4>
+                            <p>Tiešsaistes čats</p>
+                            <span>Pieejams 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <h3>Sūtiet mums ziņu</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Vārds *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-pasts *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefons</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Temats *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Izvēlieties tematu</option>
+                            <option value="general">Vispārīgs jautājums</option>
+                            <option value="hosting">Web hostings</option>
+                            <option value="vps">VPS serveri</option>
+                            <option value="domain">Domēni</option>
+                            <option value="support">Tehniskais atbalsts</option>
+                            <option value="billing">Norēķini</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Ziņa *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Aprakstiet savu jautājumu vai vajadzību..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Nosūtīt ziņu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container">
+        <h2>Biežāk Uzdotie Jautājumi</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Cik ilgi aizņem hostinga aktivizēšana?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Hostinga konts tiek aktivizēts automātiski pēc apmaksas saņemšanas, parasti 5-10 minūšu laikā. VPS serveru aktivizēšana var aizņemt līdz 30 minūtēm.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Vai ir iespējams mainīt hostinga plānu?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Jā, jūs varat jebkurā laikā uzlabot savu hostinga plānu. Plāna samazināšana ir iespējama jauna norēķinu perioda sākumā.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Kāda ir jūsu uptime garantija?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Mēs garantējam 99.9% uptime visiem mūsu hostinga pakalpojumiem. Ja šis rādītājs tiek pārsniegts, mēs kompensējam laiku saskaņā ar SLA noteikumiem.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Vai dublējumi tiek veidoti automātiski?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Jā, mēs veidojam ikdienas automātiskos dublējumus visiem hostinga kontiem. Dublējumi tiek glabāti 30 dienas, un jūs varat tos atjaunot jebkurā laikā.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Kādi maksājumu veidi ir pieejami?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Mēs pieņemam maksājumus ar bankas kartēm, bankas pārskaitījumiem, PayPal un citiem populāriem maksājumu veidiem Latvijā.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Vai ir bezmaksas vietnes pārcelšana?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Jā, mēs piedāvājam bezmaksas vietnes pārcelšanu no cita hostinga pakalpojumu sniedzēja visiem jaunajiem klientiem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
