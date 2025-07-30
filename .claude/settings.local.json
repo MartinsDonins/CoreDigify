@@ -4,7 +4,9 @@
       "Bash(mkdir:*)",
       "Bash(npm install)",
       "Bash(npm start)",
-      "Bash(npm run check-node:*)"
+      "Bash(npm run check-node:*)",
+      "Bash(rmdir:*)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }
