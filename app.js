@@ -11,29 +11,69 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Default route redirects to English
 app.get('/', (req, res) => {
+    res.redirect('/en');
+});
+
+// English routes
+app.get('/en', (req, res) => {
+    res.render('index-en', { 
+        title: 'CoreDigify - Professional Web Development and WordPress Solutions',
+        page: 'home',
+        lang: 'en'
+    });
+});
+
+app.get('/en/web-development', (req, res) => {
+    res.render('webdev-en', { 
+        title: 'Web Development - CoreDigify WordPress and Custom Websites',
+        page: 'webdev',
+        lang: 'en'
+    });
+});
+
+app.get('/en/contact', (req, res) => {
+    res.render('contact-en', { 
+        title: 'Contact Us - CoreDigify',
+        page: 'contact',
+        lang: 'en'
+    });
+});
+
+// Latvian routes
+app.get('/lv', (req, res) => {
     res.render('index', { 
         title: 'CoreDigify - Profesionāla Web Lapu Izstrāde un WordPress Risinājumi',
-        page: 'home'
+        page: 'home',
+        lang: 'lv'
     });
 });
 
-
-app.get('/kontakti', (req, res) => {
-    res.render('contact', { 
-        title: 'Sazināties ar Mums - CoreDigify',
-        page: 'contact'
-    });
-});
-
-app.get('/web-izstrade', (req, res) => {
+app.get('/lv/web-izstrade', (req, res) => {
     res.render('webdev', { 
         title: 'Web Lapu Izstrāde - CoreDigify WordPress un Pielāgotās Vietnes',
-        page: 'webdev'
+        page: 'webdev',
+        lang: 'lv'
     });
 });
 
-const PORT = process.env.PORT || 3000;
+app.get('/lv/kontakti', (req, res) => {
+    res.render('contact', { 
+        title: 'Sazināties ar Mums - CoreDigify',
+        page: 'contact',
+        lang: 'lv'
+    });
+});
+
+// Legacy redirects
+app.get('/web-izstrade', (req, res) => {
+    res.redirect('/lv/web-izstrade');
+});
+
+app.get('/kontakti', (req, res) => {
+    res.redirect('/lv/kontakti');
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -43,17 +83,11 @@ app.use((err, req, res, next) => {
 
 // 404 handler
 app.use((req, res) => {
-    res.status(404).render('index', { 
-        title: 'Page Not Found',
-        page: 'home'
+    res.status(404).render('index-en', { 
+        title: 'Page Not Found - CoreDigify',
+        page: 'home',
+        lang: 'en'
     });
 });
-
-// Start server only if not being required as module
-if (require.main === module) {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-}
 
 module.exports = app;
